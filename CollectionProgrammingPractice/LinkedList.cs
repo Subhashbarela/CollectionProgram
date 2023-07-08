@@ -147,6 +147,27 @@ namespace CollectionProgrammingPractice
                 Console.WriteLine("the list is empty :");
             }
         }
+        public void InsertAfter(int existingData, int newData)
+        {
+            Node temp = head;
+
+            while (temp != null && temp.data != existingData)
+            {
+                temp = temp.next;
+            }
+
+            if (temp == null)
+            {
+                // The existing node with the given value was not found.
+                Console.WriteLine("Node with value " + existingData + " not found.");
+            }
+            else
+            {
+                Node newNode = new Node(newData);
+                newNode.next = temp.next;
+                temp.next = newNode;
+            }
+        }
         internal void display()
         {
             Console.WriteLine("\n............................................\n");
