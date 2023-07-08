@@ -11,7 +11,7 @@ namespace CollectionProgrammingPractice
         static void Main(string[] args)
         {
             LinkedList list = new LinkedList();
-            Console.WriteLine("1:Create LinkedList \n2: Add Data \n3: Appending data");
+            Console.WriteLine("1:Create LinkedList \n2: Add Data \n3: Appending data \n4: Insert Specific Pos");
             Console.WriteLine("Enter the choice");
             int choice = int.Parse(Console.ReadLine());
             switch (choice)
@@ -49,6 +49,16 @@ namespace CollectionProgrammingPractice
                         list.AddLast(first);
                         list.AddLast(second);
                         list.AddLast(third);
+                        list.display();
+                        break;
+                    }
+                case 4:
+                    {
+                        Console.WriteLine("insert the  element into specific position :");
+                        int data = Convert.ToInt32(Console.ReadLine());
+                        list.Add(56);
+                        list.Add(70);
+                        list.InterAtPosition(2, data);
                         list.display();
                         break;
                     }
