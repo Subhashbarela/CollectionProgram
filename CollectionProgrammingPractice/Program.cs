@@ -11,7 +11,7 @@ namespace CollectionProgrammingPractice
         static void Main(string[] args)
         {
             LinkedList list = new LinkedList();
-            Console.WriteLine("1:Create LinkedList \n2: Add Data \n3: Appending data \n4: Insert Specific Pos");
+            Console.WriteLine("1:Create LinkedList \n2: Add Data \n3: Appending data \n4: Insert Specific Pos \n5: Delete first elem");
             Console.WriteLine("Enter the choice");
             int choice = int.Parse(Console.ReadLine());
             switch (choice)
@@ -62,6 +62,20 @@ namespace CollectionProgrammingPractice
                         list.display();
                         break;
                     }
+                case 5:
+                    {
+                        list.AddLast(56);
+                        list.AddLast(30);
+                        list.AddLast(70);
+                        list.display();
+
+                        list.DeleteFirstElement();
+                        list.display();
+                        break;
+                    }
+                default:
+                    Console.WriteLine("Please insert the valid input....!");
+                    break;
 
             }
 

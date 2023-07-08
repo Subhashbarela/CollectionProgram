@@ -47,22 +47,7 @@ namespace CollectionProgrammingPractice
                 temp.next = LastNode;
             }
             //   Console.WriteLine("{0} inserted into linklist :", LastNode.data);
-        }
-        internal void display()
-        {
-            Console.WriteLine("............................................\n");
-            Node temp = head;
-            if (temp == null)
-            {
-                Console.WriteLine("the linked list is empty ");
-                return;
-            }
-            while (temp != null)
-            {
-                Console.Write(temp.data + " ");
-                temp = temp.next;
-            }
-        }
+        }        
         internal int InterAtPosition(int pos, int data)
         {
             Node newNode = new Node(data);
@@ -97,6 +82,31 @@ namespace CollectionProgrammingPractice
                 }
             }
             return 0;
+        }
+        public void DeleteFirstElement()
+        {
+            //Node delete = new Node(head);
+            if (this.head != null)
+            {
+                Node temp = this.head;
+                this.head = this.head.next;
+                temp = null;
+            }
+        }
+        internal void display()
+        {
+            Console.WriteLine("............................................\n");
+            Node temp = head;
+            if (temp == null)
+            {
+                Console.WriteLine("the linked list is empty ");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.Write(temp.data + " ");
+                temp = temp.next;
+            }
         }
     }
 }
