@@ -26,7 +26,7 @@ namespace CollectionProgrammingPractice
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} inserted into linklist :", node.data);
+           // Console.WriteLine("{0} inserted into linklist :", node.data);
         }
         public void AddLast(int last)
         {
@@ -93,9 +93,30 @@ namespace CollectionProgrammingPractice
                 temp = null;
             }
         }
+        internal void DeleteLastElement()
+        {
+            //Node delete = new Node(head);
+            if (this.head == null)
+            {
+
+                Console.WriteLine("linked list is empty ");
+            }
+            if (head.next == null)
+            {
+                head = null;
+
+            }
+            Node last = head;
+            // Node SecondLast=head
+            while (last.next.next != null)
+            {
+                last = last.next;
+            }
+            last.next = null;
+        }
         internal void display()
         {
-            Console.WriteLine("............................................\n");
+            Console.WriteLine("\n............................................\n");
             Node temp = head;
             if (temp == null)
             {

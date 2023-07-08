@@ -11,16 +11,17 @@ namespace CollectionProgrammingPractice
         static void Main(string[] args)
         {
             LinkedList list = new LinkedList();
-            Console.WriteLine("1:Create LinkedList \n2: Add Data \n3: Appending data \n4: Insert Specific Pos \n5: Delete first elem");
+            list.Add(56);
+            list.Add(30);
+            list.Add(70);
+            Console.WriteLine("1:Create LinkedList \n2: Add Data \n3: Appending data \n4: Insert Specific Pos" +
+                " \n5: Delete first elem \n6: Dlete last elem");
             Console.WriteLine("Enter the choice");
             int choice = int.Parse(Console.ReadLine());
             switch (choice)
             {
                 case 1:
                     {
-                        list.Add(56);
-                        list.Add(30);
-                        list.Add(70);
                         list.display();
                         break;
                     }
@@ -42,13 +43,7 @@ namespace CollectionProgrammingPractice
                     {
                         Console.WriteLine("insert the first element into linked list :");
                         int first = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("insert the second element into linked list :");
-                        int second = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("insert the third element into linked list :");
-                        int third = Convert.ToInt32(Console.ReadLine());
                         list.AddLast(first);
-                        list.AddLast(second);
-                        list.AddLast(third);
                         list.display();
                         break;
                     }
@@ -56,20 +51,23 @@ namespace CollectionProgrammingPractice
                     {
                         Console.WriteLine("insert the  element into specific position :");
                         int data = Convert.ToInt32(Console.ReadLine());
-                        list.Add(56);
-                        list.Add(70);
-                        list.InterAtPosition(2, data);
+                        Console.WriteLine("insert the position :");
+                        int pos = Convert.ToInt32(Console.ReadLine());
+                        list.InterAtPosition(pos, data);
                         list.display();
                         break;
                     }
                 case 5:
-                    {
-                        list.AddLast(56);
-                        list.AddLast(30);
-                        list.AddLast(70);
+                    {                       
                         list.display();
-
                         list.DeleteFirstElement();
+                        list.display();
+                        break;
+                    }
+                case 6:
+                    {
+                        list.display();
+                        list.DeleteLastElement();
                         list.display();
                         break;
                     }
