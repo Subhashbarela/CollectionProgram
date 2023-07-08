@@ -15,7 +15,7 @@ namespace CollectionProgrammingPractice
             list.Add(30);
             list.Add(70);
             Console.WriteLine("1:Create LinkedList \n2: Add Data \n3: Appending data \n4: Insert Specific Pos" +
-                " \n5: Delete first elem \n6: Dlete last elem");
+                " \n5: Delete first elem \n6: Dlete last elem\n7: Search Elem");
             Console.WriteLine("Enter the choice");
             int choice = int.Parse(Console.ReadLine());
             switch (choice)
@@ -69,6 +69,13 @@ namespace CollectionProgrammingPractice
                         list.display();
                         list.DeleteLastElement();
                         list.display();
+                        break;
+                    }
+                case 7:
+                    {                     
+                        list.display();
+                        Console.WriteLine("\n......................");
+                        list.FindElement(70);
                         break;
                     }
                 default:

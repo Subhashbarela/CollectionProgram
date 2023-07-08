@@ -114,6 +114,39 @@ namespace CollectionProgrammingPractice
             }
             last.next = null;
         }
+        public void FindElement(int search)
+        {
+            Node SearchElem = new Node(search);
+            SearchElem = this.head;
+            int found = 0;
+            int i = -0;
+            if (SearchElem != null)
+            {
+                while (SearchElem != null)
+                {
+                    if (SearchElem.data == search)
+                    {
+                        i++;
+                        found++;
+                        break;
+                    }
+                    SearchElem = SearchElem.next;
+                    i++;
+                }
+                if (found == 1)
+                {
+                    Console.WriteLine(search + " is found at position = " + i + ".");
+                }
+                else
+                {
+                    Console.WriteLine(search + " is not found in the list ");
+                }
+            }
+            else
+            {
+                Console.WriteLine("the list is empty :");
+            }
+        }
         internal void display()
         {
             Console.WriteLine("\n............................................\n");
