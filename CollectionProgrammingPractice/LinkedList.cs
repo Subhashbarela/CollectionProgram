@@ -27,7 +27,26 @@ namespace CollectionProgrammingPractice
                 temp.next = node;
             }
             Console.WriteLine("{0} inserted into linklist :", node.data);
+        }
+        public void AddLast(int last)
+        {
+            Node LastNode = new Node(last);
 
+            if (this.head == null)
+            {
+                this.head = LastNode;
+                // Console.WriteLine("list is empty ;");
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = LastNode;
+            }
+            //   Console.WriteLine("{0} inserted into linklist :", LastNode.data);
         }
         internal void display()
         {
